@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='newsitem loadopacity'><a href='{:U('/Mobile/Stock/Detail',array('articleid'=>$vo['articleid']))}' title='点击查看详情'><span class='title'><em class='fa fa-angle-right'></em> {$vo.title}</span><span class='datetime'>{:date('Y-m-d',$vo['updatetime'])}</span></a></div></volist>"
+}

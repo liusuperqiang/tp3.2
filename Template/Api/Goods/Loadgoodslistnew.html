@@ -1,0 +1,7 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"lists":[<volist name="list" id="vo">{ "goodsid":"{$vo.goodsid}","goodsnum":"{$vo.goodsnum}","goodsname":"{$vo.goodsname}","subtitle":"{$vo.subtitle}","standard":"{$vo.standard}","stock":"{$vo.stock}","unit":"{$vo.unit}","brandname":"{$vo.brandname}","isotc":"{$vo.isotc}","price_market":"{$vo.price_market}","price":"{$vo.price}","price_market_dis":"{$vo.price_market_dis}","price_dis":"{$vo.price_dis}","defaultpicurl":"{$vo.defaultpicurl}","isrecommend":"{$vo.isrecommend}","ishot":"{$vo.ishot}","istop":"{$vo.istop}","collcount":"{$vo.collcount}","hits":"{$vo.hits}","salecount":"{$vo.salecount}","isdrug":"{$vo.isdrug}","goodsurl":"{$vo.goodsurl}" }<if condition="$i neq count($list)">,</if></volist>]
+}

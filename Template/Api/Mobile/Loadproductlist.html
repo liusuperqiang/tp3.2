@@ -1,0 +1,10 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='newsitemgallery loadopacity'><a href='{:U('/Mobile/Product/Detail','productid='.$vo['productid'])}' title='点击查看详情'><div class='img'><img src='{$vo.defaultpicurl}' /></div><div class='title'>{$vo.productname}{$vo.standard}</div></a></div></volist>"
+}
+
+

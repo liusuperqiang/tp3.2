@@ -1,0 +1,7 @@
+<volist name="list" id="vo" empty="$empty">
+<div class="srcuseritem" data-storeid="{$vo.storeid}">
+	<h1>店铺：{$vo.storename}</h1>
+	<h2>公司：{$vo.company}</h2>
+	<h2>类型：<if condition="$vo['icon_isselft'] eq 1">自营<else/>非自营</if></h2>
+</div>
+</volist>

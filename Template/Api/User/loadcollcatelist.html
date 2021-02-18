@@ -1,0 +1,9 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><a href='{:U('/Mobile/User/Colldetail')}?cateid={$vo.cateid}' class='detail fixed-flex fixed-flex-sb-s d-s{$vo.status}'><div class='info fixed-flexv fixed-flex-sb-s'><div class='title'>{$vo.catename}</div><div class='memo'>{:HtmlEncode($vo['memo'])}</div><div class='goods fixed-flex fixed-flex-sb-s'><div class='gitems fixed-flex fixed-flex-fs-s'><volist name="vo['goodslist']" id="vv" offset="0" length='4'><div class='gitem'><img src='{$vv.goodsimg}'/></div></volist><if condition="count($vo['goodslist']) gt 4"><div class='gitemmore'>...</div></if><if condition="$vo['goodscount'] gt 0"><div class='goodscount <if condition="$vo['goodscount'] gt 9">dbk</if>'>{$vo.goodscount}</div></if></div><div class='total fixed-flex fixed-flex-c-c'><if condition="$vo['price_total_rate'] gt 0"><span class='price'>{$vo.price_total_rate}</span><else/><span class='pricenull'>0</span></if></div></div></div><div class='other fixed-flex fixed-flex-c-c'><span class=''><switch name="vo['status']"><case value="0">{$Think.lang.m-user-tabkey-collcates0}</case><case value="1">{$Think.lang.m-user-tabkey-collcates1}</case><case value="2">{$Think.lang.m-user-tabkey-collcates2}</case></switch></span><div class='time'>{:date('m-d H:i',$vo['updatetime'])}</div></div></a></volist>"
+}
+

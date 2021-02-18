@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='ngoodsitem'><a class='detaillink fixed-flex fixed-flex-sb-s' href='{:U('/Mobile/Shop/Detail','goodsid='.$vo['goodsid'])}'><div class='thumb'><img class='lazy' data-original='{$vo.defaultpicurl}' title='{$vo.goodsname}'></div><div class='goodsinfo fixed-flexv fixed-flex-sb-s'><div class='base'><div class='goodsname'>{$vo.goodsname}</div><if condition="$vo['subtitle'] neq ''"><div class='subtitle'>{$vo.subtitle}</div></if></div><div class='prop'><div class='pricemod fixed-flex fixed-flex-fs-b'><div class='item'><dfn>&yen;</dfn><span class='price'>{$vo.price}</span></div><div class='item market'><dfn>&yen;</dfn><span class='price'>{$vo.price_market}</span></div></div><div class='other'><span class='item'>销量：<em>{$vo.salecount}</em></span><span class='item'>关注：<em>{$vo.hits}</em></span></div></div></div></a></div></volist>"
+}

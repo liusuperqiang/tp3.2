@@ -1,0 +1,22 @@
+<div class="panelbrandbox">
+	<div class="subkey">热门品牌</div>
+	<div class="subcont fixed-flex fixed-flex-fs-s">
+		<volist name="brandrecommendlist" id="vo">
+		<div class="branditem fixed-flexc fixed-flex-c-c" rel="selectbrand" data-modelid="{$vo.modelid}" data-brand="{$vo.listname}" data-depth="{$vo.depth}">
+			<div class="img"><img src="{$vo.brandimg}"></div>
+			<div class="name">{$vo.listname}</div>
+		</div>
+		</volist>
+	</div>
+	<volist name="brandlist" id="vo">
+	<div class="subkey">{$vo.key}</div>
+	<div class="subcont fixed-flex fixed-flex-fs-s">
+		<volist name="vo['list']" id="vv">
+		<div class="branditem fixed-flexc fixed-flex-c-c" rel="selectbrand" data-modelid="{$vv.modelid}" data-brand="{$vv.listname}" data-depth="{$vv.depth}">
+			<div class="img"><img src="{$vv.brandimg}"></div>
+			<div class="name">{$vv.listname}</div>
+		</div>
+		</volist>
+	</div>
+	</volist>
+</div>

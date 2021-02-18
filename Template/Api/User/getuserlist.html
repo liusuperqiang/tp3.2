@@ -1,0 +1,6 @@
+<volist name="list" id="vo" empty="$empty">
+<div class="srcuseritem" data-uid="{$vo.uid}">
+	<h1>会员：<if condition="$vo['name'] neq ''">{$vo.name}<else/>{$vo.nickname}</if></h1>
+	<h1>手机：{$vo.mobile}</h1>
+</div>
+</volist>

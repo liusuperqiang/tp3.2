@@ -1,0 +1,27 @@
+<volist name="list" id="vo" empty="$empty">
+<switch name="forrange">
+<case value="cate">
+<div class="srcuseritem" data-forid="{$vo.cateid}">
+	<h1>分类：{$vo.catename}</h1>
+</div>
+</case>
+<case value="special">
+<div class="srcuseritem" data-forid="{$vo.specialid}">
+	<h1>专题：{$vo.specialname}</h1>
+</div>
+</case>
+<case value="goods">
+<div class="srcuseritem" data-forid="{$vo.goodsid}">
+	<h1>商品名：{$vo.goodsname}</h1>
+	<h1>货号：{$vo.goodsnum}</h1>
+</div>
+</case>
+<case value="store">
+<div class="srcuseritem" data-forid="{$vo.storeid}">
+	<h1>店铺：{$vo.storename}</h1>
+	<h2>公司：{$vo.company}</h2>
+	<h2>类型：<if condition="$vo['icon_isselft'] eq 1">自营<else/>非自营</if></h2>
+</div>
+</case>
+</switch>
+</volist>

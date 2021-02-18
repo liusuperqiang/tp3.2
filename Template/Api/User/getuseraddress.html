@@ -1,0 +1,8 @@
+<div class="paneladdressbox">
+	<volist name="list" id="vo" empty="$empty">
+		<div class="addressitem" rel="{$rel}" data-name="{$vo.name}" data-mobile="{$vo.mobile}" data-address="{$vo.prov}{$vo.city}{$vo.area}{$vo.addr}">
+			<div class="row1"><span class="name">{$vo.name}</span><span class="mobile">{$vo.mobile}</span></div>
+			<div class="row2">{$vo.prov}{$vo.city}{$vo.area}{$vo.addr}</div>
+		</div>
+	</volist>
+</div>

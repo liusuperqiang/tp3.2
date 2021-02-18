@@ -1,0 +1,6 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"title":"<switch name="depth"><case value="1">请选择品牌系列</case><case value="2">请选择排量</case><case value="3">请选择年份</case><case value="4">请选择车型</case></switch>",
+"data":"<volist name="list" id="vo"><div class='cardataitem' data-modelid='{$vo.modelid}' data-listname='{$vo.listname}' data-depth='{$vo.depth}' data-brandimg='{$vo.brandimg}' data-cartype='{$vo.cartype}' data-seatnum='{$vo.seatnum}' <if condition="$depth eq 4"> data-brand='{$vo.brand}' data-series='{$vo.series}' data-output='{$vo.output}' data-year='{$vo.year}' data-modelname='{$vo.modelname}'</if>>{$vo.listname}</div></volist>"
+}

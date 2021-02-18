@@ -1,0 +1,35 @@
+<if condition="UID gt 0">
+<div class="rightloginmod">
+	<ul class="barusernav">
+		<li><div class="inner"><a href="{:U('/User/Index')}" class="" title="会员首页"><div class="ico uc"></div><div class="urlname">会员首页</div></a></div></li>
+		<li><div class="inner"><a href="{:U('/User/Orderlist')}" class="" title="我的订单"><div class="ico order"></div><div class="urlname">我的订单</div></a></div></li>
+		<li><div class="inner"><a href="{:U('/User/Colllist')}" class="" title="我的收藏"><div class="ico coll"></div><div class="urlname">我的收藏</div></a></div></li>
+		<li><div class="inner"><a href="{:U('/User/Userinfo')}" class="" title="资料维护"><div class="ico info"></div><div class="urlname">资料维护</div></a></div></li>
+		<li><div class="inner"><a href="{:U('/User/Address')}" class="" title="收货地址"><div class="ico addr"></div><div class="urlname">收货地址</div></a></div></li>
+		<li><div class="inner"><a href="{:U('/User/Safe')}" class="" title="安全中心"><div class="ico safe"></div><div class="urlname">安全中心</div></a></div></li>
+	</ul>
+</div>
+
+<else/>
+<div class="rightloginmod">
+	<form class="rbform" action="{:U('/Api/User/Checklogin')}" method="post" onsubmit="return RightbarCheckLogin(this)">
+		<div class="control-group">
+			<label class="control-label username">用户名</label>
+			<div class="controls">
+				<input class="lg" type="text" name="username" value="" placeholder="用户名、手机号、Email..." autocomplete="off" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label password">密　码</label>
+			<div class="controls">
+				<input class="lg" type="password" name="password" value="" placeholder="请输入登录密码..." autocomplete="off" />
+			</div>
+		</div>
+		<div class="dlglogintip" id="dlglogintip"></div>
+		<input type="hidden" name="action" value="rightbar" />
+		<div class="control-action">
+			<button type="submit" class="btn-submit"><em class="fa fa-fw fa-sign-in"></em> 立即登录</button>
+		</div>
+	</form>
+</div>
+</if>

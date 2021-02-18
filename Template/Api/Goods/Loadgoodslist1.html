@@ -1,0 +1,8 @@
+{
+"IsValid":{$hasdata},
+"Messages":"{$msg}",
+"Skip":{$skip},
+"Pagecount":{$pagecount},
+"Pagetotalcount":{$pagetotalcount},
+"Data":"<volist name="list" id="vo"><div class='goodsitem'><a href='{:U('/Mobile/Goods/Detail','goodsid='.$vo['goodsid'])}'><div class='img'><img class='lazy' data-original='{$vo.defaultpicurl}' alt='{$vo.goodsname}'></div><div class='goodsname'>{$vo.brandname} {$vo.goodsname} {$vo.standard}</div><div class='goodsprop'><span class='item stock'>库存：<em>{$vo.stock}{$vo.unit}</em></span><span class='item hits'>关注：<em>{$vo.hits}</em></span><span class='item salecount'>销量：<em>{$vo.salecount}</em></span></div><div class='mod-price'><span class='priceitem'><dfn>&yen;</dfn><span class='price'>{$vo.price}</span></span><span class='priceitem pm'><dfn>&yen;</dfn><span class='price'>{$vo.price_market}</span></span></div></a></div></volist>"
+}

@@ -1,0 +1,31 @@
+<if condition="!empty($advdata)">
+<div class="cateadv-container">
+<a href="{$advdata.advurl}" title="{$advdata.advname}"><img src="{$advdata.imgurl}" /></a>
+</div>
+</if>
+<dl class="subcatelist">
+<volist name="list" id="vo">
+<dt><a href="{:U('/Mobile/Goods/Category',array('cateid'=>$vo['cateid']))}" title="{$vo.catename}">{$vo.catename}</a></dt>
+<dd>
+<volist name="vo['childlist']" id="vv">
+<a href="{:U('/Mobile/Goods/Category',array('cateid'=>$vv['cateid']))}" title="{$vv.catename}">{$vv.catename}</a>
+</volist>
+</dd>
+</volist>
+</dl>
+<div class="clear2"></div>
+<h1 class="catetitle"><div class="name">热门推荐</div></h1>
+<div class="mod-goods">
+	<volist name="recommendlist" id="vo" empty="$rdlempty">
+	<div class="goodsitem">
+		<a href="{:U('/Mobile/Goods/Detail','goodsid='.$vo['goodsid'])}">
+			<div class="img"><img class="lazy" data-original="{$vo.defaultpicurl}" alt="{$vo.goodsname}"></div>
+			<div class="goodsname">{$vo.goodsname} {$vo.standard}</div>
+			<div class="mod-price">
+				<span class="priceitem"><dfn>&yen;</dfn><span class="price">{$vo.price}</span></span>
+				<span class="priceitem pm"><dfn>&yen;</dfn><span class="price">{$vo.price_market}</span></span>
+			</div>
+		</a>
+	</div>
+	</volist>
+</div>

@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='item fixed-flexv fixed-flex-sb-s'><div class='userinfo fixed-flex fixed-flex-sb-c'><div class='user'>{$vo.email_dis}</div><div class='status'><if condition="$vo['status'] eq 1"><span class='over'>{$Think.lang.m-user-invitelogstatus-over}</span><else/><span class='pending'>{$Think.lang.m-user-invitelogstatus-pending}</span></if></div></div><div class='commdata fixed-flexv fixed-flex-sb-s'><div class='subitem join fixed-flex fixed-flex-sb-c'><div class='k'>{$Think.lang.m-user-invitelog-reg}</div><div class='c1'>{$vo.profit_join_rate}</div><div class='c2'>{:date('m-d H:i',$vo['regtime'])}</div><div class='c3'><img src='__MTHEME__/images/icon_c_right_15a526.svg' /></div></div><div class='subitem order fixed-flex fixed-flex-sb-c'><div class='k'>{$Think.lang.m-user-invitelog-order}</div><div class='c1'>{$vo.profit_order_rate}</div><div class='c2'><if condition="$vo['ordertime'] gt 0">{:date('m-d H:i',$vo['ordertime'])}<else/><span class='text-muted'>{$Think.lang.m-user-invitelog-pending}</span></if></div><div class='c3'><if condition="$vo['status'] eq 1"><img src='__MTHEME__/images/icon_c_right_15a526.svg' /><else/><img src='__MTHEME__/images/icon_c_error_d81e06.svg' /></if></div></div></div></div></volist>"
+}

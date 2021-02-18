@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='item fixed-flexv fixed-flex-sb-s' <if condition="$showlevel eq 1">rel='getchild' data-uid='{$vo.uid}'</if>><div class='base fixed-flex fixed-flex-sb-c'><div class='user'><h1>{$vo.name}</h1><h2>{$vo.email}</h2></div><div class='time'><span>{:date('m-d H:i',$vo['jointime'])}</span></div></div><div class='wayinfo fixed-flex fixed-flex-sb-c'><div class='k'>{$Think.lang.m-joinway-key}</div><div class='way {$vo.joinway}'><switch name="vo['joinway']"><case value="qrcode">{$Think.lang.m-joinway-qrcode}</case><case value="site">{$Think.lang.m-joinway-site}</case><case value="goods">{$Think.lang.m-joinway-goods}</case><case value="own">{$Think.lang.m-joinway-own}</case><case value="invitecode">{$Think.lang.m-joinway-invitecode}</case></switch></div></div></div></volist>"
+}

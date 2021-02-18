@@ -1,0 +1,7 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"lists":[<volist name="list" id="vo">{ "id":"{$vo.id}","title":"{$vo.title}","assettype":"{$vo.assettype}","mode":"{$vo.mode}","val":"{$vo.val}","updatetime":"{$vo.updatetime}","showtypehtml":"{$vo.showtypehtml}","valinc":"{$vo.valinc}","valdec":"{$vo.valdec}","memo":"{$vo.memo}" }<if condition="$i neq count($list)">,</if></volist>]
+}

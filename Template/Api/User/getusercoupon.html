@@ -1,0 +1,28 @@
+<div class="panelcouponbox mod-coupon fixedsmall">
+<volist name="list" id="vo" empty="$empty">
+<div class='item' rel="{$rel}" data-couponid="{$vo.couponid}" data-amount="{$vo.amount}" data-amount_display="{$vo.amount_display}">
+	<div class='box fixed-flex fixed-flex-fs-s'>
+		<div class='amountbox fixed-flexv fixed-flex-c-c'>
+			<div class='amount fixed-flex fixed-flex-c-b'><dfn>&yen;</dfn><span>{$vo.amount}</span></div>
+			<if condition="$vo['limitamount'] gt 0"><div class='limitamount'>满{$vo.limitamount}元可用</div></if>
+		</div>
+		<div class='exp fixed-flexv fixed-flex-fs-s'>
+			<div class='couponname'>
+				<if condition="$vo['productid'] gt 0"><span class='product'>限商品[{$vo.productname}]使用</span></if><span class='name'>{$vo.name}</span>
+			</div>
+			<div class='expireddate'>
+				限{:date('Y-m-d H:i',$vo['stoptime'])}前使用
+			</div>
+			<div class='hrline'></div>
+			<div class='foot fixed-flex fixed-flex-sb-c coupondetail'>
+				<div class='bl'><label>点击选择</label></div>
+				<div class='br'></div>
+			</div>
+		</div>
+	</div>
+</div>
+</volist>
+</div>
+
+
+

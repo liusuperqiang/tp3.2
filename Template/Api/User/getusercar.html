@@ -1,0 +1,13 @@
+<div class="panelcarbox">
+	<div class="carlist">
+			<volist name="carlist" id="vo" empty="$empty">
+			<div class="item fixed-flex fixed-flex-fs-c" rel="{$rel}" data-carid="{$vo.carid}" data-brand="{$vo.brand}" data-series="{$vo.series}" data-carnum="{$vo.carnum}" data-modelname="{$vo.modelname}">
+				<div class="img"><img src="{$vo.brandimg}"></div>
+				<div class="name">
+					<div class="carnum">{$vo.carnum}</div>
+					<div class="modelname">{$vo.modelname}</div>
+				</div>
+			</div>
+			</volist>
+	</div>
+</div>

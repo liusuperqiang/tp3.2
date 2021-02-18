@@ -1,0 +1,9 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='goodsitem <if condition="$position eq 'index'"><if condition="$vo['istop'] eq 1">big</if></if> fixed-flex loadopacity'><div class='goodsitem-card'><a class='detaillink' href='{:U('/Mobile/Goods/Detail','goodsid='.$vo['goodsid'])}'><div class='image-wrap'><div class='image'><img class='lazy' data-original='{$vo.defaultpicurl}' title='{$vo.goodsname}'></div></div><div class='details fixed-flex-c-c'>{$vo.goodsname}</div></a><div class='goods-price fixed-flex fixed-flex-sa-c'><span class='original'>{$currentcurrencysymbol} <span>{$vo.price_org_rate}</span></span><span class='current'><div class='cutout top'></div><div class='cutout bottom'></div><span class='cprice'>{$currentcurrencysymbol} <span>{$vo.price_rate}</span></span></span><div class='leftcir'></div><div class='rightcir'></div></div><if condition="UID gt 0"><div class='dist-price fixed-flex'><span class='key'>{$Think.lang.profit-total}:</span><span class='dist'>{$currentcurrencysymbol} <span>{$vo.profitout_dist_val_rate}</span></span></div></if></div></div></volist>"
+}
+

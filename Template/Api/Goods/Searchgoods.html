@@ -1,0 +1,9 @@
+<volist name="List" id="vo" empty="$empty">
+<tr class="text-center goodsitems">
+	<td><img src="{$vo.defaultpicurl}" data-org="{$vo.defaultpicurl}" class="listimg square small border"></td>
+	<td class="text-left"><span class="text-success">{$vo.goodsname}</span>&nbsp;&nbsp;<span class="text-info">货号：{$vo.goodsnum}</span>&nbsp;&nbsp;<span class="text-danger">规格：{$vo.standard}</span></td>
+	<td class="tip"><span class="text-danger" data-toggle="tooltip" data-placement="top" title="市场价"><dfn>&yen;</dfn>{$vo.price_market}</span></td>
+	<td class="tip"><span class="text-success" data-toggle="tooltip" data-placement="top" title="商城价"><dfn>&yen;</dfn>{$vo.price}</span></td>
+	<td><button type="button" class="btn btn-success selgoods" data-goodsid="{$vo.goodsid}" data-goodsname="{$vo.goodsname_org}" data-goodsnum="{$vo.goodsnum_org}" data-standard="{$vo.standard}" data-defaultpicurl="{$vo.defaultpicurl}" data-price="{$vo.price}" data-pricemarket="{$vo.price_market}"><em class="fa fa-fw fa-check-square-o"></em> 添加到购物单</button></td>
+</tr>
+</volist>

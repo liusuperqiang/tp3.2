@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='item fixed-flex fixed-flex-sb-s' data-assettype='<switch name="vo['assettype']"><case value="profiting">{$Think.lang.m-tabkey-profiting}</case><case value="profitover">{$Think.lang.m-tabkey-profitover}</case></switch>' data-title='{$vo.title}' data-memo='{$vo.memo}' data-time='{:date('Y-m-d H:i:s',$vo['updatetime'])}'><if condition="$showtype eq 'all'"><div class='types fixed-flex fixed-flex-fs-c'><span class='icon {$vo.assettype}'></span></div></if><div class='cont'><h1>{$vo.title}</h1><div class='date'>{:date('Y-m-d H:i:s',$vo['updatetime'])}</div></div><div class='valmod fixed-flex fixed-flex-fe-c <if condition="$vo['mode'] eq 1">inc<else/>dec</if> '><if condition="$vo['mode'] eq 1"><span class='mode'>+</span><dfn>{$currentcurrencysymbol}</dfn><span class='val'>{$vo.val_rate}</span><else/><span class='mode'>-</span><dfn>{$currentcurrencysymbol}</dfn><span class='val'>{$vo.val_rate}</span></if></div></div></volist>"
+}

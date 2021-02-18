@@ -1,0 +1,5 @@
+<div class="collcatebox">
+	<volist name="list" id="vo" empty="$empty">
+	<div class="collcateitem" data-goodsid="{$goodsid}" data-cateid="{$vo.cateid}"><em class="fa fa-fw fa-plus"></em> {$vo.catename}<if condition="$vo['goodscount'] gt 0"><span>({$vo.goodscount})</span></if></div>
+	</volist>
+</div>

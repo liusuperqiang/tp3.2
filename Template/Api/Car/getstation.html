@@ -1,0 +1,17 @@
+<div class="panelstationbox">
+	<div class="staappdate"><if condition="$statype eq 1">检测站<else/>车管所</if> <span>{:date('Y-m-d',$appdatetime)}</span> 服务计划</div>
+	<volist name="list" id="vo" empty="$empty">
+	<div class="staitem fixed-flex fixed-flex-fs-c <if condition="$vo['limitcount'] gt 0">enablesta<else/>disablesta</if>" data-staid="{$vo.staid}" data-staname="{$vo.staname}" rel="selectsta">
+		<div class="stainfo">
+			<h1>{$vo.staname}</h1>
+			<h2>{$vo.address}</h2>
+		</div>
+		<div class="limitcount fixed-flexv fixed-flex-c-c"><em>可预约数</em><span>{$vo.limitcount}</span></div>
+		<if condition="$vo['limitcount'] gt 0">
+		<div class="selstatus enablesel">点击预约</div>
+		<else/>
+		<div class="selstatus disablesel">不可预约</div>
+		</if>
+	</div>
+	</volist>
+</div>

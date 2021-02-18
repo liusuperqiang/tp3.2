@@ -1,0 +1,7 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"lists":[<volist name="list" id="vo">{ "goodsid":"{$vo.goodsid}","id":"{$vo.id}","goodsname":"{$vo.goodsname}","goodspic":"{$vo.goodspic}","standard":"{$vo.standard}","price_market":"{$vo.price_market}","price":"{$vo.price}","price_market_dis":"{$vo.price_market_dis}","price_dis":"{$vo.price_dis}","goodsurl":"{$vo.goodsurl}" }<if condition="$i neq count($list)">,</if></volist>]
+}

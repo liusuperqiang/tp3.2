@@ -1,0 +1,8 @@
+<volist name="list" id="vo" empty="$empty">
+								<div class="distitem" data-uid="{$vo.uid}">
+									<div class="itemc">Email:{$vo.email}</div>
+									<div class="itemc">手机:{$vo.mobile}</div>
+									<div class="itemc">姓名:{$vo.name}</div>
+									<div class="itemc">渠道:<switch name="vo['joinway']"><case value="qrcode">二维码</case><case value="site">网站推广</case><case value="goods">商品推广</case><case value="invitecode">邀请码推广</case><case value="own">自有</case></switch></div>
+								</div>
+</volist>

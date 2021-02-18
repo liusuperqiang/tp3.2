@@ -1,0 +1,8 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='item fixed-flex fixed-flex-sb-s'><div class='img fixed-flex fixed-flex-c-c'><a href='{:U('/Mobile/Goods/Detail','goodsid='.$vo['goodsid'])}'><img src='{$vo.defaultpicurl}'></a></div><div class='info fixed-flexv fixed-flex-sb-s'><h1 class='goodsname'><a href='{:U('/Mobile/Goods/Detail','goodsid='.$vo['goodsid'])}'>{$vo.goodsname}</a></h1><div class='sitems'><span class='k'>{$Think.lang.m-price-key}:</span><span class='price'>{$vo.price_rate}</span> (<span class='price price-org'>{$vo.price_org_rate}</span>)</div><div class='sitems fixed-totalcomm'><span class='k'>{$Think.lang.m-profit-total-key}:</span><span class='price profit'>{$vo.profitout_dist_val_rate}</span> (<span class='price ratio'>{$vo.profitout_dist_last}%</span>)</div><div class='sitems'><span class='k'>{$Think.lang.m-profit-last-key}:</span><span class='price profit-last'>{$vo.profitout_dist_last_val_rate}</span></div><div class='sitems fixed-flex fixed-flex-c-c'><if condition="1 eq 2"><button type='button' class='btn btn-org btn-xs' rel='createlink' data-clipboard-text='{:urldecode($vo['extlink'])}'><span class='createlink'></span></button><button type='button' class='btn btn-info btn-xs' rel='createqr' data-link='{$vo.extlink}'><span class='createqr'></span></button></if><button type='button' class='btn btn-success btn-xs' rel='addcollcate' data-goodsid='{$vo.goodsid}'><span class='addcollcate'></span></button></div></div></div></volist>"
+}

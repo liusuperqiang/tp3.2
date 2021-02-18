@@ -1,0 +1,15 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='orderitem'><a class='mainurl' href='{:U('/Mobile/User/Orderdetail')}?orderid={$vo.orderid}' data-id='{$vo.orderid}' data-status='{$vo.status}'><div class='rowtop fixed-flex fixed-flex-sb-s'><div class='date'>{:date('Y-m-d H:i',$vo['createtime'])}</div><div class='status'><switch name="vo['status']"><case value="-1">已取消</case><case value="0">待付款</case><case value="1">已付款</case><case value="2">配货中</case><case value="3">已出库</case><case value="4">已完成</case></switch></div></div><div class='goodslists'><div class='dgoodslist fixed-flex fixed-flex-fs-s'><volist name="vo['goodslist']" id="vv"><div class='gimgitem'><img src='{$vv.goodsimg}'></div></volist></div></div><div class='rowbottom fixed-flex fixed-flex-sb-s'><div class='oinfo'>&nbsp;</div><div class='pay'>共 <span class='num_total'>{$vo.num_total}</span> 件商品&nbsp;&nbsp;实付款：<span class='price_total'><dfn>&yen;</dfn>{$vo.amount_total_pay}</span></div></div></a><if condition="$vo['status'] eq 0"><div class='order-footerop'><if condition="$vo['status'] eq 0">
+
+    <a href='{:U('/Api/User/Cancelorder')}' data-id='{$vo.orderid}' data-note='确定要取消该订单吗？取消后可以重新下单！' class='btn-orderop btn-cancel' rel='ajax-confirm' data-opid='cancelorder' data-re='refresh'>取消订单</a>
+
+
+    <a href='{:U('/Mobile/Shop/Orderresult')}?orderid={$vo.orderid}&ordernum={$vo.ordernum}' class='btn-orderop btn-payorder'>去支付</a></if></div></if></div></volist>"
+}
+
+

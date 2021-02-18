@@ -1,0 +1,35 @@
+<if condition="!empty($advdata)">
+<div class="cateadv-container">
+<a href="{$advdata.advurl}" title="{$advdata.advname}"><img src="{$advdata.imgurl}" /></a>
+</div>
+</if>
+<dl class="subcatelist">
+<volist name="list" id="vo">
+<dt><a href="{:U('/Mobile/Shop/Category',array('cateid'=>$vo['cateid']))}" title="{$vo.catename}">{$vo.catename}</a></dt>
+<dd>
+<volist name="vo['childlist']" id="vv">
+<a href="{:U('/Mobile/Shop/Category',array('cateid'=>$vv['cateid']))}" title="{$vv.catename}">{$vv.catename}</a>
+</volist>
+</dd>
+</volist>
+</dl>
+<div class="clear2"></div>
+<if condition="$recommendlist">
+<h1 class="catetitle"><div class="name">热门推荐</div></h1>
+<div class="mod-goods list-xs fixed-flexv fixed-flex-fs-s">
+	<volist name="recommendlist" id="vo">
+	<div class="goodsitem">
+		<a href="{:U('/Mobile/Shop/Detail','goodsid='.$vo['goodsid'])}" class="fixed-flex fixed-flex-fs-s">
+			<div class="img"><img class="lazy" data-original="{$vo.defaultpicurl}" alt="{$vo.goodsname}"></div>
+			<div class="goodsexp fixed-flexv fixed-flex-sb-s">
+				<div class="goodsname">{$vo.goodsname}</div>
+				<div class="pricemod fixed-flex fixed-flex-fs-b">
+					<div class="item"><dfn>&yen;</dfn><span class="price">{$vo.price}</span></div>
+					<div class="item market"><dfn>&yen;</dfn><span class="price">{$vo.price_market}</span></div>
+				</div>
+			</div>
+		</a>
+	</div>
+	</volist>
+</div>
+</if>

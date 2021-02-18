@@ -1,0 +1,464 @@
+<style type="text/css" media="all">
+@charset "utf-8";
+.rightnav{
+width:300px;
+height:100%;
+position:fixed;
+background-color:#f8f8f8;
+right:-260px;
+top:0;
+z-index:100;
+}
+.rightnav.active{
+right:0;
+}
+.rightnav{
+-webkit-transition: all 800ms;
+-moz-transition: all 800ms;
+-ms-transition: all 800ms;
+-o-transition: all 800ms;
+transition: all 800ms;
+}
+.rightnav .bar{
+float:left;
+width:40px;
+height:100%;
+background-color:#047e3a;
+position:relative;
+}
+.rightnav .bar .barslide{
+width:40px;
+height:400px;
+position:absolute;
+left:0;
+top:50%;
+margin-top:-200px;
+}
+.rightnav .bar .barslide .shopcart{
+color:#fff;
+cursor:pointer;
+padding:8px 0;
+}
+.rightnav .bar .barslide .shopcart .ico{
+display:block;
+width:40px;
+height:40px;
+background:url(/Public/themes/baozhilin/images/icon_rb_gouwuche.svg) no-repeat center center;
+background-size:30px;
+}
+.rightnav .bar .barslide .shopcart .name{
+display:block;
+font-size:14px;
+line-height:20px;
+text-align:center;
+}
+.rightnav .bar .barslide .shopcart .count{
+background-color:#fff;
+display:block;
+height:30px;
+width:30px;
+border-radius:30px;
+text-align:center;
+line-height:30px;
+margin:5px auto 0 auto;
+color:#094;
+font-size:16px;
+}
+.rightnav .bar .barslide .shopcart:hover{
+background-color:#f60;
+}
+.rightnav .bar .barslide .shopcart:hover .count{
+color:#f60;
+}
+.rightnav .bar .barslide .shopcart,.rightnav .bar .barslide .shopcart .count{
+-webkit-transition: all 300ms;
+-moz-transition: all 300ms;
+-ms-transition: all 300ms;
+-o-transition: all 300ms;
+transition: all 300ms;
+}
+.rightnav .bar .barslide .barline{
+border-top:1px #07ba57 solid;
+width:30px;
+height:0;
+margin:10px auto;
+}
+.rightnav .bar .barslide .item{
+width:40px;
+height:40px;
+position:relative;
+margin:10px 0;
+}
+.rightnav .bar .barslide .item .ico{
+width:40px;
+height:40px;
+position:relative;
+cursor:pointer;
+display:block;
+}
+.rightnav .bar .barslide .item.i-account .ico{
+background:url(/Public/themes/baozhilin/images/icon_rb_zhanghao.svg) no-repeat center center;
+background-size:26px;
+}
+.rightnav .bar .barslide .item.i-fav .ico{
+background:url(/Public/themes/baozhilin/images/icon_rb_shoucang.svg) no-repeat center center;
+background-size:26px;
+}
+.rightnav .bar .barslide .item.i-feed .ico{
+background:url(/Public/themes/baozhilin/images/icon_rb_liuyan.svg) no-repeat center center;
+background-size:26px;
+}
+.rightnav .bar .barslide .item.i-qr .ico{
+background:url(/Public/themes/baozhilin/images/icon_rb_qr.svg) no-repeat center center;
+background-size:26px;
+}
+.rightnav .bar .barslide .item.i-top .ico{
+background:url(/Public/themes/baozhilin/images/icon_rb_top.svg) no-repeat center center;
+background-size:26px;
+}
+.rightnav .bar .barslide .item:hover .ico{
+background-color:#f60;
+}
+.rightnav .bar .barslide .item .ico{
+-webkit-transition: all 300ms;
+-moz-transition: all 300ms;
+-ms-transition: all 300ms;
+-o-transition: all 300ms;
+transition: all 300ms;
+}
+.rightnav .bar .barslide .item .tip{
+height:40px;
+position:absolute;
+font-size:14px;
+line-height:40px;
+width:100px;
+top:0;
+right:80px;
+color:#fff;
+text-align:center;
+background-color:rgba(255,153,0,.9);
+display:none;
+-moz-opacity:0;
+opacity: 0;
+}
+.rightnav .bar .barslide .item .tip .trag{
+display:block;
+border:7px solid;
+border-color:transparent transparent transparent rgba(255,153,0,.9);
+position:absolute;
+top:13px;
+right:-14px;
+}
+.rightnav .bar .barslide .item .tip{
+-webkit-transition: all 800ms;
+-moz-transition: all 800ms;
+-ms-transition: all 800ms;
+-o-transition: all 800ms;
+transition: all 800ms;
+}
+.rightnav .bar .barslide .item.i-qr .qr{
+border:1px #a0a0a0 solid;
+position:absolute;
+bottom:0;
+right:49px;
+display:none;
+}
+.rightnav .bar .barslide .item.i-qr .qr .trag{
+display:block;
+width:9px;
+height:13px;
+background:url(/Public/themes/baozhilin/images/fixed_navigation_bgs.gif) no-repeat 0 -48px;
+position:absolute;
+bottom:10px;
+right:-9px;
+z-index:1;
+}
+.rightnav .bar .barslide .item.i-qr:hover .qr{
+display:block;
+}
+.rightnav .barcont{
+float:left;
+width:260px;
+height:100%;
+}
+.rightnav .barcont .bcontbox{
+width:100%;
+height:100%;
+position:relative;
+}
+.rightnav .barcont .bcontbox > h1{
+font-size:16px;
+line-height:40px;
+background-color:#d0d0d0;
+padding:0 10px;
+height:40px;
+position:relative;
+}
+.rightnav .barcont .bcontbox > h1 .bctitle{
+float:left;
+color:#424242;
+}
+.rightnav .barcont .bcontbox > h1 .closebar{
+position:absolute;
+right:10px;
+top:8px;
+height:20px;
+width:20px;
+border:1px #a0a0a0 solid;
+background-color:#fff;
+text-align:center;
+font-size:16px;
+line-height:18px;
+color:#a0a0a0;
+cursor:pointer;
+border-radius:4px;
+}
+.rightnav .barcont .bcontbox > h1 .closebar:hover{
+color:#e7211e;
+border:1px #e7211e solid;
+}
+.rightnav .barcont .bcontbox > h1 .closebar{
+-webkit-transition: all 300ms;
+-moz-transition: all 300ms;
+-ms-transition: all 300ms;
+-o-transition: all 300ms;
+transition: all 300ms;
+}
+.rightnav .barcont .bcontbox .mod-barcontent{
+padding:10px;
+}
+.rightnav .barcont .bcontbox .mod-barcontent:after{
+content:"";
+display:block;
+clear:both;
+}
+/* 登录框 */
+.rightloginmod{
+width:100%;
+margin:0 auto;
+padding-top:20px;
+}
+.rightloginmod .dlglogintip{
+font-size:16px;
+line-height:24px;
+color:#e7211e;
+}
+
+/* 登录注册CSS */
+form.rbform .control-group{
+margin:35px 0;
+border:1px #ccc solid;
+background-color:#fff;
+height:40px;
+}
+form.rbform .control-group.error{
+border:1px #e7211e solid;
+color:#e7211e;
+}
+
+form.rbform .control-group .control-label{
+float:left;
+height:40px;
+border-right:1px #ccc solid;
+width:75px;
+font-size:14px;
+text-align:right;
+line-height:40px;
+padding-right:5px;
+}
+form.rbform .control-group .control-label.username{
+background:url(/Public/themes/baozhilin/images/icon_username_707070.svg) no-repeat 8px center;
+background-size:20px;
+}
+form.rbform .control-group .control-label.mobile{
+background:url(/Public/themes/baozhilin/images/icon_mobile_707070.svg) no-repeat 10px center;
+background-size:20px;
+}
+form.rbform .control-group .control-label.verifycode{
+background:url(/Public/themes/baozhilin/images/icon_verifycode_707070.svg) no-repeat 8px center;
+background-size:20px;
+}
+form.rbform .control-group .control-label.mobileverify{
+background:url(/Public/themes/baozhilin/images/icon_mobileverify_707070.svg) no-repeat 10px center;
+background-size:20px;
+}
+form.rbform .control-group .control-label.password{
+background:url(/Public/themes/baozhilin/images/icon_password_707070.svg) no-repeat 8px center;
+background-size:20px;
+}
+form.rbform .control-group .controls{
+float:left;
+height:40px;
+width:155px;
+}
+form.rbform .control-group .controls input.lg{
+background-color:transparent;
+width:95%;
+border:0;
+padding:0 5px;
+font-size:16px;
+line-height:30px;
+margin-top:5px;
+}
+form.rbform .control-group .controls .il{
+float:left;
+height:50px;
+width:120px;
+}
+form.rbform .control-group .controls .ir{
+float:right;
+height:50px;
+width:140px;
+}
+form.rbform .control-group .controls .ir img{
+height:50px;
+width:140px;
+}
+form.rbform .control-group .controls button.sendsms{
+height:50px;
+width:140px;
+background-color:#094;
+color:#fff;
+font-size:16px;
+line-height:50px;
+border:0;
+cursor:pointer;
+}
+form.rbform .control-group .controls button.sendsms:hover{
+background-color:#08ad51;
+}
+form.rbform .control-group .controls button.sendsms[disabled],form.rbform .control-group .controls button.sendsms.disabled{
+background-color:#ccc;
+cursor: not-allowed;
+}
+form.rbform .control-group .controls button.sendsms[disabled]:hover,form.rbform .control-group .controls button.sendsms.disabled:hover{
+background-color:#ccc;
+cursor: not-allowed;
+}
+form.rbform .control-group .controls button.sendsms{
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+       -o-transition: all 300ms;
+          transition: all 300ms;
+}
+form.rbform .control-action{
+text-align:center;
+margin:10px 0;
+}
+form.rbform .control-action button.btn-submit{
+height:50px;
+width:200px;
+background-color:#f90;
+color:#fff;
+font-size:18px;
+line-height:50px;
+border:0;
+border-radius:5px;
+cursor:pointer;
+}
+form.rbform .control-action button.btn-submit:hover{
+background-color:#ffad32;
+}
+form.rbform .control-action button{
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+       -o-transition: all 300ms;
+          transition: all 300ms;
+}
+form.rbform .control-group{
+  -webkit-transition: all 300ms;
+     -moz-transition: all 300ms;
+       -o-transition: all 300ms;
+          transition: all 300ms;
+}
+ul.barusernav li{
+float:left;
+width:50%;
+margin-bottom:20px;
+}
+ul.barusernav li .inner{
+width:80px;
+margin:0 auto;
+}
+ul.barusernav li .inner a{
+display:block;
+text-align:center;
+}
+ul.barusernav li .inner a .ico{
+border-radius:80px;
+width:80px;
+height:80px;
+background-color:#e5e5e5;
+}
+ul.barusernav li .inner a .urlname{
+text-align:center;
+line-height:30px;
+}
+ul.barusernav li .inner a .ico.uc{
+background:#fe9f21 url(/Public/themes/baozhilin/images/icon_rb_zhanghao.svg) no-repeat center center;
+background-size:40px;
+}
+ul.barusernav li .inner a .ico.order{
+background:#ff6762 url(/Public/themes/baozhilin/images/icon_rb_dingdan_ffffff.svg) no-repeat center center;
+background-size:40px;
+}
+ul.barusernav li .inner a .ico.coll{
+background:#8a8ff7 url(/Public/themes/baozhilin/images/icon_rb_shoucang_ffffff.svg) no-repeat center center;
+background-size:40px;
+}
+ul.barusernav li .inner a .ico.info{
+background:#fcd12d url(/Public/themes/baozhilin/images/icon_rb_ziliao_ffffff.svg) no-repeat center center;
+background-size:40px;
+}
+ul.barusernav li .inner a .ico.addr{
+background:#fd81bf url(/Public/themes/baozhilin/images/icon_rb_shouhuo_ffffff.svg) no-repeat center center;
+background-size:40px;
+}
+ul.barusernav li .inner a .ico.safe{
+background:#4bc7eb url(/Public/themes/baozhilin/images/icon_rb_anquan_ffffff.svg) no-repeat center center;
+background-size:40px;
+}
+
+</style>
+<div class="rightnav" id="rightnav">
+	<div class="bar">
+		<div class="barslide">
+			<div class="shopcart" rel="slidebar" for="i-shopcart"><span class="ico"></span><span class="name">购<br />物<br />车</span><div class="count" id="rightbar_shopcartcount">0</div></div>
+			<div class="barline"></div>
+			<div class="item i-account">
+				<div class="ico open" rel="slidebar" for="i-account"></div>
+				<div class="tip">我的账户<span class="trag"></span></div>
+			</div>
+			<div class="item i-fav">
+				<div class="ico open" rel="slidebar" for="i-fav"></div>
+				<div class="tip">我的收藏<span class="trag"></span></div>
+			</div>
+			<div class="item i-qr">
+				<div class="ico"></div>
+				<div class="qr"><img src="__THEME__/images/new_app_picR1.jpg" /><span class="trag"></span></div>
+			</div>
+			<div class="item i-top">
+				<div class="ico" id="gotop"></div>
+				<div class="tip">返回顶部<span class="trag"></span></div>
+			</div>
+		</div>
+	</div>
+	<div class="barcont">
+		<div class="bcontbox" id="i-shopcart" style="display:none;">
+			<h1><span class="bctitle"><a href="/Order/Shopcart">我的购物车</a></span><span class="closebar"><em class="fa fa-close (alias)"></em></span></h1>
+			<div class="mod-barcontent" id="rbar_shopcart">
+			</div>
+		</div>
+		<div class="bcontbox" id="i-account" style="display:none;">
+			<h1><span class="bctitle"><a href="{:U('/User/Index')}">会员中心</a></span><span class="closebar"><em class="fa fa-close (alias)"></em></span></h1>
+			<div class="mod-barcontent" id="rbar_uc">
+				
+			</div>
+		</div>
+		<div class="bcontbox" id="i-fav" style="display:none;">
+			<h1><span class="bctitle"><a href="{:U('/User/Colllist')}">我的收藏</a></span><span class="closebar"><em class="fa fa-close (alias)"></em></span></h1>
+			<div class="mod-barcontent" id="rbar_coll">
+			</div>
+		</div>
+	</div>
+</div>

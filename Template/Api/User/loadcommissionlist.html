@@ -1,0 +1,9 @@
+{
+"statuscode":{$statuscode},
+"message":"{$message}",
+"skip":{$skip},
+"pagecount":{$pagecount},
+"pagetotalcount":{$pagetotalcount},
+"data":"<volist name="list" id="vo"><div class='item fixed-flex fixed-flex-sb-s' data-assettype='<switch name="vo['assettype']"><case value="order">{$Think.lang.m-user-commissiontype-order}</case><case value="join">{$Think.lang.m-user-commissiontype-join}</case><case value="other">{$Think.lang.m-user-commissiontype-other}</case><case value="out">{$Think.lang.m-user-commissiontype-out}</case></switch>' data-title='{$vo.title}' data-memo='{$vo.memo}' data-time='{:date('Y-m-d H:i:s',$vo['updatetime'])}' data-effecttime='<if condition="$vo['effecttime'] gt 0">{:date('Y-m-d H:i:s',$vo['effecttime'])}</if>' data-status='<if condition="$vo['status'] gt 0">{$Think.lang.m-user-commission-s1}<else/>{$Think.lang.m-user-commission-s0}</if>'><div class='types fixed-flex fixed-flex-fs-c'><span class='icon {$vo.assettype}'></span></div><div class='cont'><h1>{$vo.title}</h1><div class='date <if condition="$vo['status'] eq 1">overed</if>'>{:date('Y-m-d H:i:s',$vo['updatetime'])}</div></div><div class='valmod fixed-flex fixed-flex-fe-c <if condition="$vo['mode'] eq 1">inc<else/>dec</if> '><if condition="$vo['mode'] eq 1"><span class='mode'>+</span><span class='val'>{$vo.val_rate}</span><else/><span class='mode'>-</span><span class='val'>{$vo.val_rate}</span></if></div></div></volist>"
+}
+
